@@ -14,6 +14,10 @@
 		2D3756D31BC9494800009DC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D3756D11BC9494800009DC1 /* LaunchScreen.storyboard */; };
 		2D3756DE1BC9494800009DC1 /* SliderButtonsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3756DD1BC9494800009DC1 /* SliderButtonsAppTests.swift */; };
 		2D3756E91BC9494800009DC1 /* SliderButtonsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3756E81BC9494800009DC1 /* SliderButtonsAppUITests.swift */; };
+		2D3756FB1BC94CED00009DC1 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3756FA1BC94CED00009DC1 /* DeviceTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		2D3756FD1BC94E9000009DC1 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2D3756FC1BC94E9000009DC1 /* images.jpeg */; settings = {ASSET_TAGS = (); }; };
+		2D3756FF1BC954FD00009DC1 /* DeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3756FE1BC954FD00009DC1 /* DeviceTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		2D3757011BC9569700009DC1 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3757001BC9569700009DC1 /* Device.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		2D3756E41BC9494800009DC1 /* SliderButtonsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SliderButtonsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D3756E81BC9494800009DC1 /* SliderButtonsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderButtonsAppUITests.swift; sourceTree = "<group>"; };
 		2D3756EA1BC9494800009DC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D3756FA1BC94CED00009DC1 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
+		2D3756FC1BC94E9000009DC1 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = images.jpeg; path = ../../../Downloads/images.jpeg; sourceTree = "<group>"; };
+		2D3756FE1BC954FD00009DC1 /* DeviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTableViewController.swift; sourceTree = "<group>"; };
+		2D3757001BC9569700009DC1 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +105,16 @@
 		2D3756C71BC9494800009DC1 /* SliderButtonsApp */ = {
 			isa = PBXGroup;
 			children = (
+				2D3756FC1BC94E9000009DC1 /* images.jpeg */,
 				2D3756C81BC9494800009DC1 /* AppDelegate.swift */,
 				2D3756CA1BC9494800009DC1 /* ViewController.swift */,
 				2D3756CC1BC9494800009DC1 /* Main.storyboard */,
 				2D3756CF1BC9494800009DC1 /* Assets.xcassets */,
 				2D3756D11BC9494800009DC1 /* LaunchScreen.storyboard */,
 				2D3756D41BC9494800009DC1 /* Info.plist */,
+				2D3756FA1BC94CED00009DC1 /* DeviceTableViewCell.swift */,
+				2D3756FE1BC954FD00009DC1 /* DeviceTableViewController.swift */,
+				2D3757001BC9569700009DC1 /* Device.swift */,
 			);
 			path = SliderButtonsApp;
 			sourceTree = "<group>";
@@ -229,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D3756D31BC9494800009DC1 /* LaunchScreen.storyboard in Resources */,
+				2D3756FD1BC94E9000009DC1 /* images.jpeg in Resources */,
 				2D3756D01BC9494800009DC1 /* Assets.xcassets in Resources */,
 				2D3756CE1BC9494800009DC1 /* Main.storyboard in Resources */,
 			);
@@ -256,7 +269,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D3756CB1BC9494800009DC1 /* ViewController.swift in Sources */,
+				2D3756FF1BC954FD00009DC1 /* DeviceTableViewController.swift in Sources */,
+				2D3756FB1BC94CED00009DC1 /* DeviceTableViewCell.swift in Sources */,
 				2D3756C91BC9494800009DC1 /* AppDelegate.swift in Sources */,
+				2D3757011BC9569700009DC1 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
