@@ -11,10 +11,11 @@ import UIKit
 
 class Device {
     
-    let name: String
+    var identifier: String!
+    var name: String?
     var photo: UIImage?
     
-    init?(name: String, photo: UIImage?) {
+    init?(identifier: String, name: String?, photo: UIImage?) {
         self.name = name
         self.photo = photo
     }

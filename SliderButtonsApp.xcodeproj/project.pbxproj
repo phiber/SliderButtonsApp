@@ -13,22 +13,22 @@
 		2D3756D01BC9494800009DC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D3756CF1BC9494800009DC1 /* Assets.xcassets */; };
 		2D3756D31BC9494800009DC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D3756D11BC9494800009DC1 /* LaunchScreen.storyboard */; };
 		2D3756DE1BC9494800009DC1 /* SliderButtonsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3756DD1BC9494800009DC1 /* SliderButtonsAppTests.swift */; };
-		2D3756E91BC9494800009DC1 /* SliderButtonsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3756E81BC9494800009DC1 /* SliderButtonsAppUITests.swift */; };
-		2D3756FB1BC94CED00009DC1 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3756FA1BC94CED00009DC1 /* DeviceTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		2D3756FD1BC94E9000009DC1 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2D3756FC1BC94E9000009DC1 /* images.jpeg */; settings = {ASSET_TAGS = (); }; };
-		2D3756FF1BC954FD00009DC1 /* DeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3756FE1BC954FD00009DC1 /* DeviceTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		2D3757011BC9569700009DC1 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3757001BC9569700009DC1 /* Device.swift */; settings = {ASSET_TAGS = (); }; };
+		2D3756FB1BC94CED00009DC1 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3756FA1BC94CED00009DC1 /* DeviceTableViewCell.swift */; };
+		2D3756FD1BC94E9000009DC1 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2D3756FC1BC94E9000009DC1 /* images.jpeg */; };
+		2D3756FF1BC954FD00009DC1 /* DeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3756FE1BC954FD00009DC1 /* DeviceTableViewController.swift */; };
+		2D3757011BC9569700009DC1 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3757001BC9569700009DC1 /* Device.swift */; };
+		2DA6F1C31BEE4C4D00601823 /* PeripheralNotifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA6F1C21BEE4C4D00601823 /* PeripheralNotifiable.swift */; };
+		2DD7F5ED1BF771C2003E337E /* DevicesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7F5EC1BF771C2003E337E /* DevicesList.swift */; };
+		2DD7F5EF1BF7729E003E337E /* DevicesListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7F5EE1BF7729E003E337E /* DevicesListTest.swift */; };
+		2DD7F6021BF780A6003E337E /* DevicesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7F5EC1BF771C2003E337E /* DevicesList.swift */; };
+		2DD7F6031BF789FB003E337E /* PeripheralNotifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA6F1C21BEE4C4D00601823 /* PeripheralNotifiable.swift */; };
+		2DD7F6041BF78A1E003E337E /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3757001BC9569700009DC1 /* Device.swift */; };
+		2DF7D0501BEE3A6200D2A718 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF7D04F1BEE3A6200D2A718 /* BLEManager.swift */; };
+		2DF7D0521BEE3A9A00D2A718 /* BLEHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF7D0511BEE3A9A00D2A718 /* BLEHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		2D3756DA1BC9494800009DC1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2D3756BD1BC9494800009DC1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2D3756C41BC9494800009DC1;
-			remoteInfo = SliderButtonsApp;
-		};
-		2D3756E51BC9494800009DC1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2D3756BD1BC9494800009DC1 /* Project object */;
 			proxyType = 1;
@@ -48,13 +48,19 @@
 		2D3756D91BC9494800009DC1 /* SliderButtonsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SliderButtonsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D3756DD1BC9494800009DC1 /* SliderButtonsAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderButtonsAppTests.swift; sourceTree = "<group>"; };
 		2D3756DF1BC9494800009DC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2D3756E41BC9494800009DC1 /* SliderButtonsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SliderButtonsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D3756E81BC9494800009DC1 /* SliderButtonsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderButtonsAppUITests.swift; sourceTree = "<group>"; };
 		2D3756EA1BC9494800009DC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D3756FA1BC94CED00009DC1 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
 		2D3756FC1BC94E9000009DC1 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = images.jpeg; path = ../../../Downloads/images.jpeg; sourceTree = "<group>"; };
 		2D3756FE1BC954FD00009DC1 /* DeviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTableViewController.swift; sourceTree = "<group>"; };
 		2D3757001BC9569700009DC1 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		2DA6F1C21BEE4C4D00601823 /* PeripheralNotifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralNotifiable.swift; sourceTree = "<group>"; };
+		2DD7F5EC1BF771C2003E337E /* DevicesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesList.swift; sourceTree = "<group>"; };
+		2DD7F5EE1BF7729E003E337E /* DevicesListTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DevicesListTest.swift; path = SliderButtonsAppTests/DevicesListTest.swift; sourceTree = SOURCE_ROOT; };
+		2DD7F5FA1BF78077003E337E /* SliderButtonsAppTests2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderButtonsAppTests2.swift; sourceTree = "<group>"; };
+		2DD7F5FC1BF78077003E337E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DF7D04F1BEE3A6200D2A718 /* BLEManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
+		2DF7D0511BEE3A9A00D2A718 /* BLEHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,13 +78,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2D3756E11BC9494800009DC1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -88,6 +87,7 @@
 				2D3756C71BC9494800009DC1 /* SliderButtonsApp */,
 				2D3756DC1BC9494800009DC1 /* SliderButtonsAppTests */,
 				2D3756E71BC9494800009DC1 /* SliderButtonsAppUITests */,
+				2DD7F5F91BF78077003E337E /* SliderButtonsAppTests2 */,
 				2D3756C61BC9494800009DC1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,7 +97,6 @@
 			children = (
 				2D3756C51BC9494800009DC1 /* SliderButtonsApp.app */,
 				2D3756D91BC9494800009DC1 /* SliderButtonsAppTests.xctest */,
-				2D3756E41BC9494800009DC1 /* SliderButtonsAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,7 +113,8 @@
 				2D3756D41BC9494800009DC1 /* Info.plist */,
 				2D3756FA1BC94CED00009DC1 /* DeviceTableViewCell.swift */,
 				2D3756FE1BC954FD00009DC1 /* DeviceTableViewController.swift */,
-				2D3757001BC9569700009DC1 /* Device.swift */,
+				2DD7F5EB1BF77171003E337E /* devices */,
+				2DD7F5E81BF770E6003E337E /* ble */,
 			);
 			path = SliderButtonsApp;
 			sourceTree = "<group>";
@@ -122,6 +122,7 @@
 		2D3756DC1BC9494800009DC1 /* SliderButtonsAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				2DD7F5F31BF772E2003E337E /* devices */,
 				2D3756DD1BC9494800009DC1 /* SliderButtonsAppTests.swift */,
 				2D3756DF1BC9494800009DC1 /* Info.plist */,
 			);
@@ -135,6 +136,42 @@
 				2D3756EA1BC9494800009DC1 /* Info.plist */,
 			);
 			path = SliderButtonsAppUITests;
+			sourceTree = "<group>";
+		};
+		2DD7F5E81BF770E6003E337E /* ble */ = {
+			isa = PBXGroup;
+			children = (
+				2DF7D0511BEE3A9A00D2A718 /* BLEHandler.swift */,
+				2DF7D04F1BEE3A6200D2A718 /* BLEManager.swift */,
+				2DA6F1C21BEE4C4D00601823 /* PeripheralNotifiable.swift */,
+			);
+			name = ble;
+			sourceTree = "<group>";
+		};
+		2DD7F5EB1BF77171003E337E /* devices */ = {
+			isa = PBXGroup;
+			children = (
+				2DD7F5EC1BF771C2003E337E /* DevicesList.swift */,
+				2D3757001BC9569700009DC1 /* Device.swift */,
+			);
+			name = devices;
+			sourceTree = "<group>";
+		};
+		2DD7F5F31BF772E2003E337E /* devices */ = {
+			isa = PBXGroup;
+			children = (
+				2DD7F5EE1BF7729E003E337E /* DevicesListTest.swift */,
+			);
+			name = devices;
+			sourceTree = "<group>";
+		};
+		2DD7F5F91BF78077003E337E /* SliderButtonsAppTests2 */ = {
+			isa = PBXGroup;
+			children = (
+				2DD7F5FA1BF78077003E337E /* SliderButtonsAppTests2.swift */,
+				2DD7F5FC1BF78077003E337E /* Info.plist */,
+			);
+			path = SliderButtonsAppTests2;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,41 +212,21 @@
 			productReference = 2D3756D91BC9494800009DC1 /* SliderButtonsAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2D3756E31BC9494800009DC1 /* SliderButtonsAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2D3756F31BC9494800009DC1 /* Build configuration list for PBXNativeTarget "SliderButtonsAppUITests" */;
-			buildPhases = (
-				2D3756E01BC9494800009DC1 /* Sources */,
-				2D3756E11BC9494800009DC1 /* Frameworks */,
-				2D3756E21BC9494800009DC1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2D3756E61BC9494800009DC1 /* PBXTargetDependency */,
-			);
-			name = SliderButtonsAppUITests;
-			productName = SliderButtonsAppUITests;
-			productReference = 2D3756E41BC9494800009DC1 /* SliderButtonsAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		2D3756BD1BC9494800009DC1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Philipp Berger";
 				TargetAttributes = {
 					2D3756C41BC9494800009DC1 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 9UY72672S3;
 					};
 					2D3756D81BC9494800009DC1 = {
-						CreatedOnToolsVersion = 7.0.1;
-						TestTargetID = 2D3756C41BC9494800009DC1;
-					};
-					2D3756E31BC9494800009DC1 = {
 						CreatedOnToolsVersion = 7.0.1;
 						TestTargetID = 2D3756C41BC9494800009DC1;
 					};
@@ -230,7 +247,6 @@
 			targets = (
 				2D3756C41BC9494800009DC1 /* SliderButtonsApp */,
 				2D3756D81BC9494800009DC1 /* SliderButtonsAppTests */,
-				2D3756E31BC9494800009DC1 /* SliderButtonsAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -254,13 +270,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2D3756E21BC9494800009DC1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -269,10 +278,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D3756CB1BC9494800009DC1 /* ViewController.swift in Sources */,
+				2DF7D0501BEE3A6200D2A718 /* BLEManager.swift in Sources */,
 				2D3756FF1BC954FD00009DC1 /* DeviceTableViewController.swift in Sources */,
+				2DF7D0521BEE3A9A00D2A718 /* BLEHandler.swift in Sources */,
 				2D3756FB1BC94CED00009DC1 /* DeviceTableViewCell.swift in Sources */,
 				2D3756C91BC9494800009DC1 /* AppDelegate.swift in Sources */,
+				2DA6F1C31BEE4C4D00601823 /* PeripheralNotifiable.swift in Sources */,
 				2D3757011BC9569700009DC1 /* Device.swift in Sources */,
+				2DD7F5ED1BF771C2003E337E /* DevicesList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,14 +294,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D3756DE1BC9494800009DC1 /* SliderButtonsAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2D3756E01BC9494800009DC1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2D3756E91BC9494800009DC1 /* SliderButtonsAppUITests.swift in Sources */,
+				2DD7F5EF1BF7729E003E337E /* DevicesListTest.swift in Sources */,
+				2DD7F6031BF789FB003E337E /* PeripheralNotifiable.swift in Sources */,
+				2DD7F6021BF780A6003E337E /* DevicesList.swift in Sources */,
+				2DD7F6041BF78A1E003E337E /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,11 +308,6 @@
 			isa = PBXTargetDependency;
 			target = 2D3756C41BC9494800009DC1 /* SliderButtonsApp */;
 			targetProxy = 2D3756DA1BC9494800009DC1 /* PBXContainerItemProxy */;
-		};
-		2D3756E61BC9494800009DC1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2D3756C41BC9494800009DC1 /* SliderButtonsApp */;
-			targetProxy = 2D3756E51BC9494800009DC1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -414,6 +418,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SliderButtonsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.phiber.SliderButtonsApp;
@@ -425,6 +430,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SliderButtonsApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.phiber.SliderButtonsApp;
@@ -456,30 +462,6 @@
 			};
 			name = Release;
 		};
-		2D3756F41BC9494800009DC1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = SliderButtonsAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ch.phiber.SliderButtonsAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = SliderButtonsApp;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		2D3756F51BC9494800009DC1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = SliderButtonsAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ch.phiber.SliderButtonsAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = SliderButtonsApp;
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -499,6 +481,7 @@
 				2D3756EF1BC9494800009DC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D3756F01BC9494800009DC1 /* Build configuration list for PBXNativeTarget "SliderButtonsAppTests" */ = {
 			isa = XCConfigurationList;
@@ -507,14 +490,7 @@
 				2D3756F21BC9494800009DC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		2D3756F31BC9494800009DC1 /* Build configuration list for PBXNativeTarget "SliderButtonsAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2D3756F41BC9494800009DC1 /* Debug */,
-				2D3756F51BC9494800009DC1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

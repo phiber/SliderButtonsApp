@@ -48,6 +48,16 @@
                ReferencedContainer = "container:SliderButtonsApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2DD7F5F71BF78077003E337E"
+               BuildableName = "SliderButtonsAppTests2.xctest"
+               BlueprintName = "SliderButtonsAppTests2"
+               ReferencedContainer = "container:SliderButtonsApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

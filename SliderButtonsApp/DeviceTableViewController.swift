@@ -8,14 +8,17 @@
 
 import UIKit
 
-class DeviceTableViewController: UITableViewController {
+class DeviceTableViewController: UITableViewController, PeripheralNotifiable {
     
     // MARK: properties
     
-    var devices = [Device]()
+    let bleManager = BLEManager()
+    let devicesList = DevicesList()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        bleManager.register(devicesList)
+        bleManager.register(self)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -25,16 +28,15 @@ class DeviceTableViewController: UITableViewController {
         
       //  self.tableView.registerClass(DeviceTableViewCell.self, forCellReuseIdentifier: "DeviceTableViewCell")
 
-        scanForDevices()
+      //  scanForDevices()
     }
     
-    func scanForDevices() {
-        let photo1 = UIImage(named: "Image")!
-        let device1 = Device(name: "device1", photo: photo1)
-        let device2 = Device(name: "device2", photo: photo1)
-        devices.append(device1!)
-        devices.append(device2!)
+    func peripheralFound(identifier: String!, name: String?, rssi: NSNumber!) {
+        self.tableView.reloadData()
     }
+    
+ 
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -48,7 +50,7 @@ class DeviceTableViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return devices.count
+        return devicesList.getDevices().count
     }
 
     
@@ -56,7 +58,7 @@ class DeviceTableViewController: UITableViewController {
         // Table view cells are reused and should be dequeued using a cell identifier.
         let cell = tableView.dequeueReusableCellWithIdentifier("DeviceTableViewCell", forIndexPath: indexPath) as! DeviceTableViewCell
 
-        let device = devices[indexPath.row]
+        let device = devicesList.getDevices()[indexPath.row]
         cell.nameLabel.text = device.name
         cell.deviceImageView.image = device.photo
         
