@@ -45,7 +45,7 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="ofV-J6-U9g">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="strength0" translatesAutoresizingMaskIntoConstraints="NO" id="ofV-J6-U9g">
                                             <rect key="frame" x="263" y="19" width="63" height="52"/>
                                             <animations/>
                                         </imageView>
@@ -73,6 +73,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="defaultImage" width="16" height="16"/>
+        <image name="strength0" width="270" height="270"/>
     </resources>
 </document>
