@@ -58,10 +58,29 @@ class DeviceTableViewController: UITableViewController, PeripheralNotifiable {
 
         let device = devicesList.getDevices()[indexPath.row]
         cell.nameLabel.text = device.name ?? "Unknown"
-        cell.deviceImageView.image = nil//device.photo
+        let imageName = calculateImageNameForRssi(device.rssi)
+        let image = UIImage(named: imageName)
+        
+        cell.deviceImageView.image = image
         cell.rssiLabel.text = device.rssi.stringValue
         
         return cell
+    }
+    
+    func calculateImageNameForRssi(rssi: NSNumber!) -> String! {
+        if (rssi.integerValue > -50) {
+            return "strength5"
+        } else if (rssi.integerValue > -60) {
+            return "strength4"
+        } else if (rssi.integerValue > -70) {
+            return "strength3"
+        } else if (rssi.integerValue > -80) {
+            return "strength2"
+        } else if (rssi.integerValue > -90) {
+            return "strength1"
+        } else {
+            return "strength0"
+        }
     }
     
 
