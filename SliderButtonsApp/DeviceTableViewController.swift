@@ -17,7 +17,7 @@ class DeviceTableViewController: UITableViewController, PeripheralNotifiable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        bleManager.register(devicesList)
+        //bleManager.register(devicesList)
         bleManager.register(self)
 
         // Uncomment the following line to preserve selection between presentations
@@ -32,12 +32,10 @@ class DeviceTableViewController: UITableViewController, PeripheralNotifiable {
     }
     
     func peripheralFound(identifier: String!, name: String?, rssi: NSNumber!) {
+        self.devicesList.peripheralFound(identifier, name: name, rssi: rssi)
         self.tableView.reloadData()
     }
     
- 
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -59,8 +57,9 @@ class DeviceTableViewController: UITableViewController, PeripheralNotifiable {
         let cell = tableView.dequeueReusableCellWithIdentifier("DeviceTableViewCell", forIndexPath: indexPath) as! DeviceTableViewCell
 
         let device = devicesList.getDevices()[indexPath.row]
-        cell.nameLabel.text = device.name
-        cell.deviceImageView.image = device.photo
+        cell.nameLabel.text = device.name ?? "Unknown"
+        cell.deviceImageView.image = nil//device.photo
+        cell.rssiLabel.text = device.rssi.stringValue
         
         return cell
     }

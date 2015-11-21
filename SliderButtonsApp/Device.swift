@@ -7,17 +7,17 @@
 //
 
 import Foundation
-import UIKit
 
 class Device {
     
-    var identifier: String!
-    var name: String?
-    var photo: UIImage?
+    let identifier: String!
+    let name: String?
+    let rssi: NSNumber!
     
-    init?(identifier: String, name: String?, photo: UIImage?) {
+    init(identifier: String, name: String?, rssi: NSNumber!) {
         self.name = name
-        self.photo = photo
+        self.identifier = identifier
+        self.rssi = rssi
     }
     
 }

@@ -11,7 +11,7 @@ import CoreBluetooth
 
 class BLEHandler : NSObject, CBCentralManagerDelegate {
     
-    var notifiable = [PeripheralNotifiable]()
+    var notifiable : PeripheralNotifiable?
     
     func centralManagerDidUpdateState(central: CBCentralManager) {
         switch (central.state)
@@ -35,25 +35,19 @@ class BLEHandler : NSObject, CBCentralManagerDelegate {
     }
     
     func register(notifiable: PeripheralNotifiable) {
-        self.notifiable.append(notifiable)
+        self.notifiable = notifiable
     }
     
     func centralManager(central: CBCentralManager, didDiscoverPeripheral peripheral: CBPeripheral, advertisementData: [String : AnyObject], RSSI: NSNumber) {
         //devices.updateValue(RSSI.description, forKey: peripheral.identifier.UUIDString)
-        print("\(peripheral.identifier.UUIDString) : \(peripheral.name) : \(RSSI)")
-    
-        for n in self.notifiable {
-            n.peripheralFound(peripheral.identifier.UUIDString, name: peripheral.name, rssi: RSSI)
-        }
+        
+        logger.debug("\(peripheral.identifier.UUIDString) : \(peripheral.name) : \(RSSI)")
+        
+        self.notifiable?.peripheralFound(peripheral.identifier.UUIDString, name: peripheral.name, rssi: RSSI)
+        
         
     }
     
-//    func centralManager(central: CBCentralManager, didDiscoverPeripheral peripheral: CBPeripheral, advertisementData: [String : AnyObject], RSSI: NSNumber) {
-//        print("\(peripheral.name) : \(RSSI) dBm")
-//        print("\(peripheral.identifier)")
-//
-//        self.notifiable?.peripheralFound(peripheral.identifier.UUIDString, name: peripheral.name, rssi: RSSI)
-//    }
     
     
 }
