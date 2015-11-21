@@ -13,7 +13,6 @@ class DeviceTableViewCell: UITableViewCell {
     // MARK: properties
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var deviceImageView: UIImageView!
-    @IBOutlet weak var rssiLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

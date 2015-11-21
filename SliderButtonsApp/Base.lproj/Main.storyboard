@@ -45,15 +45,8 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RSSI Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ad-uQ-yzJ">
-                                            <rect key="frame" x="179" y="34" width="70" height="21"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="ofV-J6-U9g">
-                                            <rect key="frame" x="257" y="0.0" width="128" height="89"/>
+                                            <rect key="frame" x="263" y="19" width="63" height="52"/>
                                             <animations/>
                                         </imageView>
                                     </subviews>
@@ -63,7 +56,6 @@
                                 <connections>
                                     <outlet property="deviceImageView" destination="ofV-J6-U9g" id="MaW-JX-Xkt"/>
                                     <outlet property="nameLabel" destination="YjM-iu-cJT" id="aZt-im-OaC"/>
-                                    <outlet property="rssiLabel" destination="9ad-uQ-yzJ" id="AkR-zh-DiV"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

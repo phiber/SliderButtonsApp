@@ -57,13 +57,11 @@ class DeviceTableViewController: UITableViewController, PeripheralNotifiable {
         let cell = tableView.dequeueReusableCellWithIdentifier("DeviceTableViewCell", forIndexPath: indexPath) as! DeviceTableViewCell
 
         let device = devicesList.getDevices()[indexPath.row]
-        cell.nameLabel.text = device.name ?? "Unknown"
+        cell.nameLabel.text = device.name ?? "(no identifier)"
         let imageName = calculateImageNameForRssi(device.rssi)
         let image = UIImage(named: imageName)
         
         cell.deviceImageView.image = image
-        cell.rssiLabel.text = device.rssi.stringValue
-        
         return cell
     }
     
