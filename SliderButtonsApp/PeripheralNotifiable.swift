@@ -10,5 +10,5 @@ import Foundation
 
 
 protocol PeripheralNotifiable: NSObjectProtocol {
-    func peripheralFound(identifier:String!, name: String?, rssi: NSNumber!)
+    func peripheralFound(identifier:String!, name: String?, rssi: NSNumber!, connectable: Bool!)
 }

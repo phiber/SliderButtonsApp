@@ -31,8 +31,8 @@ class DeviceTableViewController: UITableViewController, PeripheralNotifiable {
       //  scanForDevices()
     }
     
-    func peripheralFound(identifier: String!, name: String?, rssi: NSNumber!) {
-        self.devicesList.peripheralFound(identifier, name: name, rssi: rssi)
+    func peripheralFound(identifier: String!, name: String?, rssi: NSNumber!, connectable: Bool!) {
+        self.devicesList.peripheralFound(identifier, name: name, rssi: rssi, connectable: connectable)
         self.tableView.reloadData()
     }
     
@@ -62,6 +62,15 @@ class DeviceTableViewController: UITableViewController, PeripheralNotifiable {
         let image = UIImage(named: imageName)
         
         cell.deviceImageView.image = image
+        cell.connectButton.hidden = !device.connectable
+        
+        
+        cell.doConnect = { [unowned self] (selectedCell) -> Void in
+            let path = tableView.indexPathForRowAtPoint(selectedCell.center)!
+            logger.debug("path: \(path)")
+            logger.debug("Device: \(self.devicesList.getDevices()[path.row].identifier)")
+        }
+        
         return cell
     }
     
@@ -80,6 +89,14 @@ class DeviceTableViewController: UITableViewController, PeripheralNotifiable {
             return "strength0"
         }
     }
+    
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        logger.debug("Cell selected: \(indexPath.item)")
+        
+    }
+ 
     
 
     /*

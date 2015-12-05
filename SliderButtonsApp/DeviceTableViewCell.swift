@@ -13,6 +13,11 @@ class DeviceTableViewCell: UITableViewCell {
     // MARK: properties
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var deviceImageView: UIImageView!
+    @IBOutlet weak var connectButton: UIButton!
+    
+
+    var doConnect: ((DeviceTableViewCell) -> Void)?
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,4 +30,7 @@ class DeviceTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func connectButtonPressed(sender: AnyObject) {
+        doConnect?(self)
+    }
 }

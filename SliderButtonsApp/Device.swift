@@ -13,11 +13,13 @@ class Device {
     let identifier: String!
     let name: String?
     let rssi: NSNumber!
+    let connectable: Bool!
     
-    init(identifier: String, name: String?, rssi: NSNumber!) {
+    init(identifier: String, name: String?, rssi: NSNumber!, connectable: Bool!) {
         self.name = name
         self.identifier = identifier
         self.rssi = rssi
+        self.connectable = connectable
     }
     
 }

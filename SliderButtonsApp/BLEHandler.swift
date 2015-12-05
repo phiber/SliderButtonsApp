@@ -39,11 +39,13 @@ class BLEHandler : NSObject, CBCentralManagerDelegate {
     }
     
     func centralManager(central: CBCentralManager, didDiscoverPeripheral peripheral: CBPeripheral, advertisementData: [String : AnyObject], RSSI: NSNumber) {
-        //devices.updateValue(RSSI.description, forKey: peripheral.identifier.UUIDString)
         
-        logger.debug("\(peripheral.identifier.UUIDString) : \(peripheral.name) : \(RSSI)")
+        let connectableNumber = advertisementData[CBAdvertisementDataIsConnectable] as? NSNumber
+        let connectable = connectableNumber?.boolValue
         
-        self.notifiable?.peripheralFound(peripheral.identifier.UUIDString, name: peripheral.name, rssi: RSSI)
+        logger.debug("\(peripheral.identifier.UUIDString) : \(peripheral.name) : \(RSSI) : \(connectable ?? false)")
+        
+        self.notifiable?.peripheralFound(peripheral.identifier.UUIDString, name: peripheral.name, rssi: RSSI, connectable: connectable ?? false)
         
         
     }

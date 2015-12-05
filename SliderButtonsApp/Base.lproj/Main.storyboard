@@ -39,21 +39,30 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjM-iu-cJT">
-                                            <rect key="frame" x="8" y="34" width="163" height="21"/>
+                                            <rect key="frame" x="8" y="34" width="110" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="strength0" translatesAutoresizingMaskIntoConstraints="NO" id="ofV-J6-U9g">
-                                            <rect key="frame" x="263" y="19" width="63" height="52"/>
+                                            <rect key="frame" x="134" y="19" width="63" height="52"/>
                                             <animations/>
                                         </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbW-tc-tTV">
+                                            <rect key="frame" x="205" y="31" width="66" height="30"/>
+                                            <animations/>
+                                            <state key="normal" title="Connect"/>
+                                            <connections>
+                                                <action selector="connectButtonPressed:" destination="5CP-a5-ObW" eventType="touchUpInside" id="dr2-eP-MIW"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
+                                    <outlet property="connectButton" destination="jbW-tc-tTV" id="CrD-gc-DXQ"/>
                                     <outlet property="deviceImageView" destination="ofV-J6-U9g" id="MaW-JX-Xkt"/>
                                     <outlet property="nameLabel" destination="YjM-iu-cJT" id="aZt-im-OaC"/>
                                 </connections>
