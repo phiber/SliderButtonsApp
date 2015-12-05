@@ -16,8 +16,8 @@
 		2D3756FB1BC94CED00009DC1 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3756FA1BC94CED00009DC1 /* DeviceTableViewCell.swift */; };
 		2D3756FF1BC954FD00009DC1 /* DeviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3756FE1BC954FD00009DC1 /* DeviceTableViewController.swift */; };
 		2D3757011BC9569700009DC1 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3757001BC9569700009DC1 /* Device.swift */; };
-		2DA6C9E51C00B56D00891774 /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA6C9E41C00B56D00891774 /* XCGLogger.framework */; };
-		2DA6C9E61C00B56D00891774 /* XCGLogger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA6C9E41C00B56D00891774 /* XCGLogger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2DA1FD9F1C133DAF000BAB97 /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA1FD9E1C133DAF000BAB97 /* XCGLogger.framework */; };
+		2DA1FDA01C133DAF000BAB97 /* XCGLogger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DA1FD9E1C133DAF000BAB97 /* XCGLogger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2DA6F1C31BEE4C4D00601823 /* PeripheralNotifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA6F1C21BEE4C4D00601823 /* PeripheralNotifiable.swift */; };
 		2DD7F5ED1BF771C2003E337E /* DevicesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7F5EC1BF771C2003E337E /* DevicesList.swift */; };
 		2DD7F5EF1BF7729E003E337E /* DevicesListTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD7F5EE1BF7729E003E337E /* DevicesListTest.swift */; };
@@ -39,13 +39,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2DA6C9E71C00B56D00891774 /* Embed Frameworks */ = {
+		2DA1FDA11C133DAF000BAB97 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2DA6C9E61C00B56D00891774 /* XCGLogger.framework in Embed Frameworks */,
+				2DA1FDA01C133DAF000BAB97 /* XCGLogger.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,6 +68,7 @@
 		2D3756FA1BC94CED00009DC1 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
 		2D3756FE1BC954FD00009DC1 /* DeviceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTableViewController.swift; sourceTree = "<group>"; };
 		2D3757001BC9569700009DC1 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		2DA1FD9E1C133DAF000BAB97 /* XCGLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = XCGLogger.framework; path = "/Users/phiber/Library/Developer/Xcode/DerivedData/SliderButtonsWorkspace-borsabhzwsqfsacodxfguexrtedu/Build/Products/Debug-iphoneos/XCGLogger.framework"; sourceTree = "<absolute>"; };
 		2DA6C9E41C00B56D00891774 /* XCGLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = XCGLogger.framework; path = "/Users/phiber/Library/Developer/Xcode/DerivedData/SliderButtonsWorkspace-acatfllnlgkhjlaouzxiihygraoc/Build/Products/Debug-iphoneos/XCGLogger.framework"; sourceTree = "<absolute>"; };
 		2DA6F1C21BEE4C4D00601823 /* PeripheralNotifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeripheralNotifiable.swift; sourceTree = "<group>"; };
 		2DD7F5EC1BF771C2003E337E /* DevicesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesList.swift; sourceTree = "<group>"; };
@@ -81,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DA6C9E51C00B56D00891774 /* XCGLogger.framework in Frameworks */,
+				2DA1FD9F1C133DAF000BAB97 /* XCGLogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +99,7 @@
 		2D3756BC1BC9494800009DC1 = {
 			isa = PBXGroup;
 			children = (
+				2DA1FD9E1C133DAF000BAB97 /* XCGLogger.framework */,
 				2DA6C9E41C00B56D00891774 /* XCGLogger.framework */,
 				2D3756C71BC9494800009DC1 /* SliderButtonsApp */,
 				2D3756DC1BC9494800009DC1 /* SliderButtonsAppTests */,
@@ -188,7 +190,7 @@
 				2D3756C11BC9494800009DC1 /* Sources */,
 				2D3756C21BC9494800009DC1 /* Frameworks */,
 				2D3756C31BC9494800009DC1 /* Resources */,
-				2DA6C9E71C00B56D00891774 /* Embed Frameworks */,
+				2DA1FDA11C133DAF000BAB97 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
