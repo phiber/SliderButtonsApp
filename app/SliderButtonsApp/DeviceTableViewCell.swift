@@ -14,7 +14,7 @@ class DeviceTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var deviceImageView: UIImageView!
     @IBOutlet weak var connectButton: UIButton!
-    
+    @IBOutlet weak var uartConnectableLabel: UILabel!
 
     var doConnect: ((DeviceTableViewCell) -> Void)?
     

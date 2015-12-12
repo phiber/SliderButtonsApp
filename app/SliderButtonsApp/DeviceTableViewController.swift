@@ -31,8 +31,8 @@ class DeviceTableViewController: UITableViewController, PeripheralNotifiable {
       //  scanForDevices()
     }
     
-    func peripheralFound(identifier: String!, name: String?, rssi: NSNumber!, connectable: Bool!) {
-        self.devicesList.peripheralFound(identifier, name: name, rssi: rssi, connectable: connectable)
+    func peripheralFound(identifier: String!, name: String?, rssi: NSNumber!, connectable: Bool!, uartCapable: Bool!) {
+        self.devicesList.peripheralFound(identifier, name: name, rssi: rssi, connectable: connectable, uartCapable: uartCapable)
         self.tableView.reloadData()
     }
     
@@ -63,6 +63,7 @@ class DeviceTableViewController: UITableViewController, PeripheralNotifiable {
         
         cell.deviceImageView.image = image
         cell.connectButton.hidden = !device.connectable
+        cell.uartConnectableLabel.text = "UART: \(device.uartCapable)"
         
         
         cell.doConnect = { [unowned self] (selectedCell) -> Void in

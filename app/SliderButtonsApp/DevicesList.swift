@@ -13,8 +13,8 @@ class DevicesList: NSObject, PeripheralNotifiable  {
 
     var devices = [String: Device]()
     
-    func peripheralFound(identifier: String!, name: String?, rssi: NSNumber!, connectable: Bool!) {
-        devices.updateValue(Device(identifier: identifier, name: name, rssi: rssi, connectable: connectable), forKey: identifier)
+    func peripheralFound(identifier: String!, name: String?, rssi: NSNumber!, connectable: Bool!, uartCapable: Bool!) {
+        devices.updateValue(Device(identifier: identifier, name: name, rssi: rssi, connectable: connectable, uartCapable: uartCapable), forKey: identifier)
     
     }
 

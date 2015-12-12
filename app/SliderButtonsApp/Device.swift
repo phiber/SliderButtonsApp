@@ -14,12 +14,14 @@ class Device {
     let name: String?
     let rssi: NSNumber!
     let connectable: Bool!
+    let uartCapable: Bool!
     
-    init(identifier: String, name: String?, rssi: NSNumber!, connectable: Bool!) {
+    init(identifier: String, name: String?, rssi: NSNumber!, connectable: Bool!, uartCapable: Bool!) {
         self.name = name
         self.identifier = identifier
         self.rssi = rssi
         self.connectable = connectable
+        self.uartCapable = uartCapable
     }
     
 }
