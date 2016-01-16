@@ -1,2 +1,4 @@
-app/SliderButtonsApp.xcodeproj/
-SliderButtonsWorkspace.xcworkspace/
+SliderButtonsApp.xcodeproj/
+SliderButtonsApp.xcworkspace/
+Podfile.lock
+Pods/
