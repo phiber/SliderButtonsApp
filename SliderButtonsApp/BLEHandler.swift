@@ -13,32 +13,32 @@ class BLEHandler : NSObject, CBCentralManagerDelegate {
     
     var notifiable : PeripheralNotifiable?
     
-    func centralManagerDidUpdateState(central: CBCentralManager) {
+    func centralManagerDidUpdateState(_ central: CBCentralManager) {
         switch (central.state)
         {
-        case .Unsupported:
+        case .unsupported:
             print("BLE is unsupported")
-        case .Unauthorized:
+        case .unauthorized:
             print("BLE is unauthorized")
-        case .Unknown:
+        case .unknown:
             print("BLE is unknown")
-        case .Resetting:
+        case .resetting:
             print("BLE is resetting")
-        case .PoweredOff:
+        case .poweredOff:
             print("BLE is powered off")
-        case .PoweredOn:
+        case .poweredOn:
             print("BLE is powered on")
             print("Start Scanning")
-            central.scanForPeripheralsWithServices(nil, options: nil)
+            central.scanForPeripherals(withServices: nil, options: nil)
         }
         
     }
     
-    func register(notifiable: PeripheralNotifiable) {
+    func register(_ notifiable: PeripheralNotifiable) {
         self.notifiable = notifiable
     }
     
-    func centralManager(central: CBCentralManager, didDiscoverPeripheral peripheral: CBPeripheral, advertisementData: [String : AnyObject], RSSI: NSNumber) {
+    func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
         
         let connectableNumber = advertisementData[CBAdvertisementDataIsConnectable] as? NSNumber
         let connectable = connectableNumber?.boolValue
@@ -51,9 +51,9 @@ class BLEHandler : NSObject, CBCentralManagerDelegate {
 
 
         
-        logger.debug("\(peripheral.identifier.UUIDString) : \(peripheral.name) : \(RSSI) : \(connectable ?? false)")
+        logger.debug("\(peripheral.identifier.uuidString) : \(peripheral.name) : \(RSSI) : \(connectable ?? false)")
         
-        self.notifiable?.peripheralFound(peripheral.identifier.UUIDString, name: peripheral.name, rssi: RSSI, connectable: connectable ?? false, uartCapable: uartCapable ?? false)
+        self.notifiable?.peripheralFound(peripheral.identifier.uuidString, name: peripheral.name, rssi: RSSI, connectable: connectable ?? false, uartCapable: uartCapable ?? false)
         
         
     }
@@ -64,15 +64,16 @@ class BLEHandler : NSObject, CBCentralManagerDelegate {
         return CBUUID(string: "6e400001-b5a3-f393-e0a9-e50e24dcca9e")
     }
     
-    func stringsFromUUIDs(list: NSArray?) -> [String] {
-        let strings = list?.map({ (o: AnyObject) -> String in
+
+    
+    
+    func stringsFromUUIDs(_ list: NSArray?) -> [String] {
+        let strings = list?.map({(o: Any) -> String in
             let uuid = o as! CBUUID
-            return uuid.UUIDString
+            return uuid.uuidString
             }
         )
         return strings ?? [String]()
-        
-
     }
 
     
@@ -80,20 +81,20 @@ class BLEHandler : NSObject, CBCentralManagerDelegate {
 
 // Extend CBUUID similar to Adafruit BLEDevice
 extension CBUUID {
-    func equalsString(toString:String, caseSensitive:Bool, omitDashes:Bool)->Bool {
+    func equalsString(_ toString:String, caseSensitive:Bool, omitDashes:Bool)->Bool {
         var aString = toString
         var verdict = false
-        var options = NSStringCompareOptions.CaseInsensitiveSearch
+        var options = NSString.CompareOptions.caseInsensitive
     
         if omitDashes == true {
-            aString = toString.stringByReplacingOccurrencesOfString("-", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+            aString = toString.replacingOccurrences(of: "-", with: "", options: NSString.CompareOptions.literal, range: nil)
         }
     
         if caseSensitive == true {
-            options = NSStringCompareOptions.LiteralSearch
+            options = NSString.CompareOptions.literal
         }
     
-        verdict = aString.compare(self.representativeString() as String, options: options, range: nil, locale: NSLocale.currentLocale()) == NSComparisonResult.OrderedSame
+        verdict = aString.compare(self.representativeString() as String, options: options, range: nil, locale: Locale.current) == ComparisonResult.orderedSame
     
         return verdict
     
@@ -102,8 +103,8 @@ extension CBUUID {
     func representativeString() ->NSString{
         
         let data = self.data
-        var byteArray = [UInt8](count: data.length, repeatedValue: 0x0)
-        data.getBytes(&byteArray, length:data.length)
+        var byteArray = [UInt8](repeating: 0x0, count: data.count)
+        (data as NSData).getBytes(&byteArray, length:data.count)
         
         let outputString = NSMutableString(capacity: 16)
         

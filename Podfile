@@ -4,7 +4,7 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'SliderButtonsApp' do
-	pod 'XCGLogger', '3.2'
+	pod 'XCGLogger', '4.0.0'
 end
 
 target 'SliderButtonsAppTests' do

@@ -15,7 +15,7 @@ class BLEManager {
         self.centralManager = CBCentralManager(delegate: self.bleHandler, queue: nil)
     }
     
-    func register(notifiable: PeripheralNotifiable) {
+    func register(_ notifiable: PeripheralNotifiable) {
         self.bleHandler.register(notifiable)
     }
     

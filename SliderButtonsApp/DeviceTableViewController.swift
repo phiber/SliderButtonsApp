@@ -31,7 +31,7 @@ class DeviceTableViewController: UITableViewController, PeripheralNotifiable {
       //  scanForDevices()
     }
     
-    func peripheralFound(identifier: String!, name: String?, rssi: NSNumber!, connectable: Bool!, uartCapable: Bool!) {
+    func peripheralFound(_ identifier: String!, name: String?, rssi: NSNumber!, connectable: Bool!, uartCapable: Bool!) {
         self.devicesList.peripheralFound(identifier, name: name, rssi: rssi, connectable: connectable, uartCapable: uartCapable)
         self.tableView.reloadData()
     }
@@ -43,31 +43,31 @@ class DeviceTableViewController: UITableViewController, PeripheralNotifiable {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return devicesList.getDevices().count
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Table view cells are reused and should be dequeued using a cell identifier.
-        let cell = tableView.dequeueReusableCellWithIdentifier("DeviceTableViewCell", forIndexPath: indexPath) as! DeviceTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DeviceTableViewCell", for: indexPath) as! DeviceTableViewCell
 
         let device = devicesList.getDevices()[indexPath.row]
         cell.nameLabel.text = device.name ?? "(no identifier)"
         let imageName = calculateImageNameForRssi(device.rssi)
-        let image = UIImage(named: imageName)
+        let image = UIImage(named: imageName!)
         
         cell.deviceImageView.image = image
-        cell.connectButton.hidden = !device.connectable
+        cell.connectButton.isHidden = !device.connectable
         cell.uartConnectableLabel.text = "UART: \(device.uartCapable)"
         
         
         cell.doConnect = { [unowned self] (selectedCell) -> Void in
-            let path = tableView.indexPathForRowAtPoint(selectedCell.center)!
+            let path = tableView.indexPathForRow(at: selectedCell.center)!
             logger.debug("path: \(path)")
             logger.debug("Device: \(self.devicesList.getDevices()[path.row].identifier)")
         }
@@ -75,16 +75,16 @@ class DeviceTableViewController: UITableViewController, PeripheralNotifiable {
         return cell
     }
     
-    func calculateImageNameForRssi(rssi: NSNumber!) -> String! {
-        if (rssi.integerValue > -50) {
+    func calculateImageNameForRssi(_ rssi: NSNumber!) -> String! {
+        if (rssi.intValue > -50) {
             return "strength5"
-        } else if (rssi.integerValue > -60) {
+        } else if (rssi.intValue > -60) {
             return "strength4"
-        } else if (rssi.integerValue > -70) {
+        } else if (rssi.intValue > -70) {
             return "strength3"
-        } else if (rssi.integerValue > -80) {
+        } else if (rssi.intValue > -80) {
             return "strength2"
-        } else if (rssi.integerValue > -90) {
+        } else if (rssi.intValue > -90) {
             return "strength1"
         } else {
             return "strength0"
@@ -92,7 +92,7 @@ class DeviceTableViewController: UITableViewController, PeripheralNotifiable {
     }
     
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         logger.debug("Cell selected: \(indexPath.item)")
         
