@@ -53,7 +53,7 @@ class BLEHandler : NSObject, CBCentralManagerDelegate {
         
         logger.debug("\(peripheral.identifier.uuidString) : \(peripheral.name) : \(RSSI) : \(connectable ?? false)")
         
-        self.notifiable?.peripheralFound(peripheral.identifier.uuidString, name: peripheral.name, rssi: RSSI, connectable: connectable ?? false, uartCapable: uartCapable ?? false)
+        self.notifiable?.peripheralFound(peripheral.identifier.uuidString, name: peripheral.name, rssi: RSSI, connectable: connectable ?? false, uartCapable: uartCapable )
         
         
     }
