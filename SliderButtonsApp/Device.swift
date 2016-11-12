@@ -15,6 +15,7 @@ class Device {
     let rssi: NSNumber!
     let connectable: Bool!
     let uartCapable: Bool!
+    let lastSeen: Date!
     
     init(identifier: String, name: String?, rssi: NSNumber!, connectable: Bool!, uartCapable: Bool!) {
         self.name = name
@@ -22,6 +23,7 @@ class Device {
         self.rssi = rssi
         self.connectable = connectable
         self.uartCapable = uartCapable
+        self.lastSeen = Date()
     }
     
 }

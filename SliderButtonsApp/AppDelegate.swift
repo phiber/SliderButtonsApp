@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
        
+
         logger.setup(level: .debug, showThreadName: true, showLevel: true, showFileNames: true, showLineNumbers: true)
 
         // Override point for customization after application launch.

@@ -22,4 +22,7 @@ class DevicesListTest: XCTestCase {
         XCTAssert(deviceList.count() == 1)
     }
     
+    
+    
+    
 }
